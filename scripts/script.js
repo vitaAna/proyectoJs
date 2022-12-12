@@ -20,86 +20,86 @@ alert("gracias y bienvenidos a" + Marca)
 
 //simulando un carrito de compras utilizando arrays,bucle y metodos de busqueda
 let productos = [{
-    nombre: "remera",
-    precio: 1200
-},
-{
-    nombre: "short",
-    precio: 2000
-},
-{
-    nombre: "jeans",
-    precio: 7000
-},
-{
-    nombre: "vestido",
-    precio: 1500
-},
-{
-    nombre: "campera",
-    precio: 5000
-},
+        nombre: "remera",
+        precio: 1200
+    },
+    {
+        nombre: "short",
+        precio: 2000
+    },
+    {
+        nombre: "jeans",
+        precio: 7000
+    },
+    {
+        nombre: "vestido",
+        precio: 1500
+    },
+    {
+        nombre: "campera",
+        precio: 5000
+    },
 ];
 let carrito = []
 
 let seleccion = prompt("hola desea comprar un producto? ingrese si o no")
 while (seleccion != "si" && seleccion != "no") {
-alert("por favor ingrese si o no")
-seleccion = prompt("hola desea comprar un producto? ingrese si o no")
+    alert("por favor ingrese si o no")
+    seleccion = prompt("hola desea comprar un producto? ingrese si o no")
 }
 
 if (seleccion == "si") {
-alert("a continuacion nuestra lista de productos")
-let todosLosProductos = productos.map((producto) => producto.nombre + " " + producto.precio + "$")
-alert(todosLosProductos.join(" \n "))
+    alert("a continuacion nuestra lista de productos")
+    let todosLosProductos = productos.map((producto) => producto.nombre + " " + producto.precio + "$")
+    alert(todosLosProductos.join(" \n "))
 } else if (seleccion == "no") {
-alert("gracias visitar" + Marca + "hasta pronto")
+    alert("gracias visitar" + Marca + "hasta pronto")
 
 }
 
 while (seleccion != "no") {
-let producto = prompt("agrega un producto a tu carrito")
-let precio = 0;
+    let producto = prompt("agrega un producto a tu carrito")
+    let precio = 0;
 
-if (producto == "remera" || producto == "short" || producto == "jeans" || producto == "vestido" || producto == "campera") {
-    switch (producto) {
-        case "remera":
-            precio = 1200;
-            break;
-        case "short":
-            precio = 2000;
-            break;
-        case "jeans":
-            precio = 7000;
-            break;
-        case "vestido":
-            precio = 1500;
-            break;
-        case "campera":
-            precio = 5000;
-            break;
-        default:
-            break;
+    if (producto == "remera" || producto == "short" || producto == "jeans" || producto == "vestido" || producto == "campera") {
+        switch (producto) {
+            case "remera":
+                precio = 1200;
+                break;
+            case "short":
+                precio = 2000;
+                break;
+            case "jeans":
+                precio = 7000;
+                break;
+            case "vestido":
+                precio = 1500;
+                break;
+            case "campera":
+                precio = 5000;
+                break;
+            default:
+                break;
+        }
+
+        let unidades = parseInt(prompt("cuantas unidades quiere llevar?"));
+        carrito.push({
+            producto,
+            unidades,
+            precio
+        })
+        console.log(carrito);
+    } else {
+        alert("no tenemos ese producto");
     }
-
-    let unidades = parseInt(prompt("cuantas unidades quiere llevar?"));
-    carrito.push({
-        producto,
-        unidades,
-        precio
-    })
-    console.log(carrito);
-} else {
-    alert("no tenemos ese producto");
-}
-seleccion = prompt("desea seguir comprando? si o no")
-while (seleccion == "no") {
-    alert("gracias por la compra, hasta pronto" + Marca)
-    carrito.forEach((carritoFinal) => {
-        console.log(`producto:${carritoFinal.producto}, unidades:${carritoFinal.unidades}, total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
-    })
-    break;
-}
+    seleccion = prompt("desea seguir comprando? si o no")
+    while (seleccion == "no") {
+        alert("gracias por la compra, hasta pronto" + Marca)
+        carrito.forEach((carritoFinal) => {
+            console.log(`producto:${carritoFinal.producto}, unidades:${carritoFinal.unidades}, total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
+        })
+        break;
+    }
 }
 
 let total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0);
@@ -120,9 +120,9 @@ if (envios == "1" || envios.toLowerCase() == "zona oste") {
 } else if (envios == "4" || envios.toLowerCase() == "zona sur") {
     console.log("el valor es de $2000");
     alert("el valor es de $2000")
-}else{
+} else {
     alert("debe ingresar un numer del 1 al 4")
-    }
+}
 
 let zona = parseInt(prompt("elige tu zona para saber los dias de entrega:" + "\n" + "1-Zona Oeste" + "\n" + "2-Zona Este" + "\n" + "3-Zona Norte" + "\n" + "4-Zona Sur."));
 
