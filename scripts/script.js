@@ -1,7 +1,7 @@
 const Marca = "MV INDUMENTARIA";
 
 //formulario del cliente
-class Cliente {
+/*class Cliente {
     constructor(nombre, apellido, telefono, mail) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -16,7 +16,7 @@ class Cliente {
 let clienteUno = new Cliente(prompt("Ingrese Su Nombre").toLocaleUpperCase(), prompt("Ingrese Su Apellido").toLocaleUpperCase(), prompt("Ingrese Su telefono").toLocaleUpperCase(), prompt("Ingrese Su Mail"));
 console.log("los valores del cliente son", clienteUno)
 console.log("el cliente se llama", clienteUno.toString())
-alert("gracias y bienvenidos a" + Marca)
+alert("gracias y bienvenidos a" + Marca)*/
 
 //simulando un carrito de compras utilizando arrays,bucle y metodos de busqueda
 let productos = [{
