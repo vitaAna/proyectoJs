@@ -16,7 +16,7 @@ const Marca = "MV INDUMENTARIA";
 let clienteUno = new Cliente(prompt("Ingrese Su Nombre").toLocaleUpperCase(), prompt("Ingrese Su Apellido").toLocaleUpperCase(), prompt("Ingrese Su telefono").toLocaleUpperCase(), prompt("Ingrese Su Mail"));
 console.log("los valores del cliente son", clienteUno)
 console.log("el cliente se llama", clienteUno.toString())
-alert("gracias y bienvenidos a" + Marca)*/
+alert("gracias y bienvenidos a" + Marca)
 
 //simulando un carrito de compras utilizando arrays,bucle y metodos de busqueda
 let productos = [{
@@ -142,5 +142,5 @@ switch (zona) {
     default:
         alert("solo puedes ingresar un numero del 1 al 4");
         break;
-}
+}*/
 
