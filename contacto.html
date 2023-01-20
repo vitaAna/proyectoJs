@@ -19,77 +19,135 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/style.css">
+        <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <div class="logo"> <img src="./images/logoRojo3.jpg" alt="logo"></div>
-</header>
-<div class="cuotas">
+  </header>
+  <div class="cuotas">
     <p>3 y 6 cuotas sin interes</p>
-</div>
-
-<nav class="navbar navbar-expand-lg bg-">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./nosotros.html">nosotros</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-
-  <div class="container pt-3">
-    <form id="myForm">
-
-      <div class="mb-3">
-        <label for="name" class="form-label">Nombres</label>
-        <input type="text" class="form-control" id="name">
-      </div>
-      <div class="mb-3">
-        <label for="lastName" class="form-label">apellidos</label>
-        <input type="text" class="form-control" id="lastName">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo Electrónico</label>
-        <input type="text" class="form-control" id="email">
-      </div>
-      <div class="mb-3">
-        <label for="phone" class="form-label">Telefono</label>
-        <input type="text" class="form-control" id="phone">
-      </div>
-      <div class="mb-3">
-        <label for="consulta" class="form-label">Consulta</label>
-        <textarea class="form-control" id="consulta" rows="3"></textarea>
-      </div>
-      <button id="mainButton" type="button" class="btn btn-primary">
-
-        Enviar
-      </button>
-
-    </form>
   </div>
 
+  <nav class="navbar navbar-expand-lg bg-">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html">contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./nosotros.html">nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./productos.html">productos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <main class="consulta-container">
+    <h1>Consulta</h1>
+    <p class="consulta-texto">Para precios mayoristas llená el formulario y nos pondremos en contacto a la brevedad.</p>
+  </main>
+ 
+ 
+  <section class="formulario-container">
+    <!-- FORMULARIO -->
+    <form action="#" class="formulario" id="formulario">
+      <!-- GRUPO DE NOMBRE -->
+      <div class="formulario__grupo" id="grupo__nombre">
+        <label class="formulario__label">Nombre</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="nombre" id="nombre">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El nombre debe tener minimo 3 caracteres y solo se admiten letras.</p>
+      </div>
+      <!-- GRUPO DE APELLIDO-->
+      <div class="formulario__grupo" id="grupo__apellido">
+        <label class="formulario__label">Apellido</label>
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="apellido" id="apellido">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El apellido debe tener minimo 3 caracteres y solo se admiten letras.</p>
+      </div>
+      <!-- GRUPO DE TELÉFONO -->
+      <div class="formulario__grupo" id="grupo__telefono">
+        <label class="formulario__label">Teléfono</label>
+        <div class="formulario__grupo-input">
+          <input type="telefono" class="formulario__input" name="telefono" id="telefono" placeholder="1123456789">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El número debe tener 10 digitos</p>
+      </div>
+      <!-- GRUPO DE DNI -->
+      <div class="formulario__grupo" id="grupo__dni">
+        <label class="formulario__label">Dni</label>
+        <div class="formulario__grupo-input">
+          <input type="dni" class="formulario__input" name="dni" id="dni" placeholder="35999888">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El número debe tener 8 digitos</p>
+      </div>
+      <!-- GRUPO DE EMAIL -->
+      <div class="formulario__grupo" id="grupo__correo">
+        <label class="formulario__label">Correo Electonico</label>
+        <div class="formulario__grupo-input">
+          <input type="email" class="formulario__input" name="correo" id="correo">
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">El correo debe tener mÍnimo 4 caracteres y sólo se admiten números,
+          letras y guión bajo.</p>
+      </div>
+ 
+      <!-- MENSAJE DE CAMPOS REQUERIDOS -->
+      <div class="formulario__mensaje" id="formulario__mensaje">
+        <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
+      </div>
+      <!-- GRUPO ENVIAR -->
+      <div class="formulario__grupo formulario__grupo-btn-enviar">
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió correctamente
+        </p>
+        <input class="formulario__btn" type="submit" value="Enviar">
+      </div>
+    </form>
+  </section>
 
-
-
-
-
-
+      <!-- INICIO DE FOOTER -->
+      <footer class="footer">
+        <div class="main__footer">
+          <div class="main__footer__sub">
+            <div>
+              <img class="logo__footer" src="./images/logoRojo3-sinfondo.png" alt="logo">
+            </div>
+          <div>
+              <h2 class="redes">seguinos</h2>
+              <img src="./images/icons8-fb-.svg" alt="logo facebook">
+              <img src="./images/icons8-ig.svg" alt="logo instagram">
+              <img src="./images/icons8-what.svg" alt="logo whatsapp">
+          </div> 
+          <div class="footer__contacto">
+            <h3 class="footer__contacto__titulo">¿Queres empezar a revender?</h3>
+            <h4>Contactate con nosotros</h4>
+            <a class="footer__contacto__ingresar" href="./contacto.html#formulario">INGRESA ACA</a>
+          </div>
+        </div>
+        </div> 
+        <div class="footer__final">
+          <p>© 2023 Indumentaria MV - Todos los Derechos Reservados</p>
+        </div>  
+      </footer>
+      <!-- FIN DE FOOTER -->
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

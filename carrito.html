@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="main-wrapper">
         <aside>
             <h1 class="logo-productos">Indumentaria MV</h1>
 
@@ -52,76 +52,65 @@
         <main>
             <h2 class="titulo-pricipal">carrito</h2>
             <div class="contenedor-carrito">
-                <p class="carrito-vacio">Tu carrito está vacío.</p>
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío.</p>
 
-                <div class="carrito-productos">
-
-                    <div class="carrito-producto disabled">
-                        <img class="carrito-producto-imagen" src="./images/blusa-bca.jpg" alt="">
-                        <div class="carrito-producto-titulo">
-                            <small>Título</small>
-                            <h3>Blusa Blanca</h3>
-                        </div>
-                        <div class="carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$4500</p>
-                        </div>
-                        <div class="carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$4500</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                            </svg></button>
-                    </div>
-                    <div class="carrito-producto disabled">
-                        <img class="carrito-producto-imagen" src="./images/blusa-bca.jpg" alt="">
-                        <div class="carrito-producto-titulo">
-                            <small>Título</small>
-                            <h3>Blusa Blanca</h3>
-                        </div>
-                        <div class="carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <p>1</p>
-                        </div>
-                        <div class="carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$4500</p>
-                        </div>
-                        <div class="carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$4500</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                                </svg>
-                        </button>
-                    </div>
+                <div id="carrito-productos" class="carrito-productos disabled">
+                  <!--esto se rellena con JS-->   
                 </div>
-                <div class="carrito-acciones disabled">
+                <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izquierdo">
-                        <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
                     </div>
                     <div class="carrito-acciones-derecho">
                         <div class="carrito-acciones-total">
                             <p>Total</p>
                             <p id="total">$9000</p>
                         </div>
-                        <button class="carrito-acciones-comprar">Comprar</button>
+                        <button id="carrito-acciones-comprar" type="button" class="carrito-acciones-comprar">Comprar</button>
                     </div>
                 </div>
-                <p class="carrito-comprado disabled">Muchas gracias por tu compra!</p>
+                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra!</p>
             </div>
         </main>
     </div>
+
+      <!-- INICIO DE FOOTER -->
+      <footer class="footer">
+        <div class="main__footer">
+          <div class="main__footer__sub">
+            <div>
+              <img class="logo__footer" src="./images/logoRojo3-sinfondo.png" alt="logo">
+            </div>
+          <div>
+              <h2 class="redes">seguinos</h2>
+              <img src="./images/icons8-fb-.svg" alt="logo facebook">
+              <img src="./images/icons8-ig.svg" alt="logo instagram">
+              <img src="./images/icons8-what.svg" alt="logo whatsapp">
+          </div> 
+          <div class="footer__contacto">
+            <h3 class="footer__contacto__titulo">¿Queres empezar a revender?</h3>
+            <h4>Contactate con nosotros</h4>
+            <a class="footer__contacto__ingresar" href="./contacto.html#formulario">INGRESA ACA</a>
+          </div>
+        </div>
+        </div> 
+        <div class="footer__final">
+          <p>© 2023 Indumentaria MV - Todos los Derechos Reservados</p>
+        </div>  
+      </footer>
+      <!-- FIN DE FOOTER -->
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="./scripts/carrito.js"></script>
+
 
 </body>
 </html>

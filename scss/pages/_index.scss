@@ -1,0 +1,34 @@
+.carrousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2rem;
+}
+.our__category__wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin: 3rem;
+    padding-top: 5rem;
+    
+}
+.our__category__img:hover{
+    transform: scale(1.1);
+  background-color: rgb(245, 245, 249);
+  border-radius: 30px;
+}
+.our__medida{
+    max-width: 100%;
+    border-radius: 1rem;
+
+}
+.tips {
+    margin: 3em 5em 3em 5em;
+    &__img{
+        display: flex;
+        gap: 2rem;
+    }
+  
+}
+
+  

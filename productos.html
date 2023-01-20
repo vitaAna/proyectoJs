@@ -21,8 +21,39 @@
         <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <header>
+    <div class="logo"> <img src="./images/logoRojo3.jpg" alt="logo"></div>
+ </header>
+ <div class="cuotas">
+    <p>3 y 6 cuotas sin interes</p>
+ </div>
 
-  <div class="wrapper">
+ <nav class="navbar navbar-expand-lg bg-">
+   <div class="container-fluid">
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+       <ul class="navbar-nav">
+         <li class="nav-item">
+           <a class="nav-link" href="./index.html">inicio</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="./contacto.html">contacto</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="./nosotros.html">nosotros</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="./productos.html">productos</a>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+
+  <div class="main-wrapper">
     <aside>
       <h1 class="logo-productos">Indumentaria MV</h1>
       <section>
@@ -81,21 +112,45 @@
                 viewBox="0 0 16 16">
                 <path
                   d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z" />
-              </svg>carrito <span class="numero">0</span></a>
+              </svg>carrito <span id="numero" class="numero">0</span></a>
           </li>
         </ul>
       </section>
     </aside>
 
     <main>
-      <h2 class="titulo-principal">Todos los Productos</h2>
+      <h2 class="titulo-principal" id="titulo-principal">Todos los Productos</h2>
       <div id="contenedor-productos" class="contenedor-productos">
         <!--se rellena con JS-->
       </div>
     </main>
   </div>
 
-
+      <!-- INICIO DE FOOTER -->
+      <footer class="footer">
+        <div class="main__footer">
+          <div class="main__footer__sub">
+            <div>
+              <img class="logo__footer" src="./images/logoRojo3-sinfondo.png" alt="logo">
+            </div>
+          <div>
+              <h2 class="redes">seguinos</h2>
+              <img src="./images/icons8-fb-.svg" alt="logo facebook">
+              <img src="./images/icons8-ig.svg" alt="logo instagram">
+              <img src="./images/icons8-what.svg" alt="logo whatsapp">
+          </div> 
+          <div class="footer__contacto">
+            <h3 class="footer__contacto__titulo">¿Queres empezar a revender?</h3>
+            <h4>Contactate con nosotros</h4>
+            <a class="footer__contacto__ingresar" href="./contacto.html#formulario">INGRESA ACA</a>
+          </div>
+        </div>
+        </div> 
+        <div class="footer__final">
+          <p>© 2023 Indumentaria MV - Todos los Derechos Reservados</p>
+        </div>  
+      </footer>
+      <!-- FIN DE FOOTER -->
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
